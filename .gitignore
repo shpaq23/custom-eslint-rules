@@ -43,3 +43,7 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+#eslint-plugin
+/eslint/dist
+/eslint/node_modules

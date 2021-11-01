@@ -2,10 +2,13 @@
   "name": "custom-eslint-rules",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development"
+	  "ng": "ng",
+	  "start": "ng serve",
+	  "build": "ng build",
+	  "watch": "ng build --watch --configuration development",
+	  "lint": "eslint --ext .ts \"src/**/*.+(ts)\"",
+	  "lint:test-rules": "yarn --cwd ./eslint test",
+	  "lint:build-rules": "yarn --cwd ./eslint build"
   },
   "private": true,
   "dependencies": {
@@ -22,10 +25,14 @@
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~12.1.1",
-    "@angular/cli": "~12.1.1",
-    "@angular/compiler-cli": "~12.1.1",
-    "@types/node": "^12.11.1",
-    "typescript": "~4.3.2"
+	  "@angular-devkit/build-angular": "~12.1.1",
+	  "@angular/cli": "~12.1.1",
+	  "@angular/compiler-cli": "~12.1.1",
+	  "@types/node": "^12.11.1",
+	  "@typescript-eslint/eslint-plugin": "^5.1.0",
+	  "@typescript-eslint/parser": "^5.1.0",
+	  "eslint": "^8.1.0",
+	  "typescript": "~4.3.2",
+	  "eslint-plugin-custom-rules": "./eslint/dist"
   }
 }

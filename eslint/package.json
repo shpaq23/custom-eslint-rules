@@ -1,0 +1,27 @@
+{
+	"name": "eslint-custom-rules",
+	"version": "1.0.0",
+	"description": "plugin for custom eslint rules",
+	"main": "src/index.js",
+	"scripts": {
+		"test": "jest",
+		"build": "tsc && cp src/index.js dist/ && cp package.json dist/"
+	},
+	"dependencies": {
+		"typescript": "^4.4.4",
+		"jest": "^27.3.1",
+		"ts-jest": "^27.0.7",
+		"@types/jest": "^27.0.2",
+		"@typescript-eslint/parser": "^5.1.0",
+		"@typescript-eslint/experimental-utils": "^5.1.0",
+		"@typescript-eslint/eslint-plugin": "^5.1.0",
+		"requireindex": "^1.2.0"
+	},
+	"keywords": [
+		"eslint",
+		"eslintplugin",
+		"eslint-plugin"
+	],
+	"author": "Michal Szpak",
+	"license": "ISC"
+}
