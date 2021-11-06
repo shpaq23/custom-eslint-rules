@@ -13,6 +13,8 @@
 		"custom-rules"
     ],
     "rules": {
-		"custom-rules/readonly-injectables": "error"
+		"custom-rules/readonly-injectables": "error",
+		"custom-rules/ng-changes": "error",
+		"custom-rules/change-detection-on-push": "error"
     }
 }

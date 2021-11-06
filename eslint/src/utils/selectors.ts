@@ -4,4 +4,8 @@ export const ANY_ANGULAR_CLASS_DECORATOR =
 	'[expression.callee.name="Directive"], ' +
 	'[expression.callee.name="Pipe"], ' +
 	'[expression.callee.name="Injectable"], ' +
-	'[expression.callee.name="NgModule"])'
+	'[expression.callee.name="NgModule"])';
+
+export function getMethodSelector(methodName: string): string {
+	return `MethodDefinition[key.name=${methodName}]`;
+}
