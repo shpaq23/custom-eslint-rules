@@ -1,9 +1,8 @@
 import type { TSESTree } from '@typescript-eslint/experimental-utils';
 import { createEslintRule } from '../utils/create-eslint-rule';
-import * as utils from '../utils/utils';
 
 const RULE_NAME = 'change-detection-on-push';
-type MessageIds = 'onPushComponentChangeDetectionRequired';
+type MessageIds = 'componentOnPushRequired';
 type Options = [];
 const selector =
 	'ClassDeclaration > Decorator[expression.callee.name="Component"]';
@@ -19,7 +18,7 @@ export default createEslintRule<Options, MessageIds>({
 		},
 		schema: [],
 		messages: {
-			onPushComponentChangeDetectionRequired: 'Component ChangeDetection strategy should be set to ChangeDetectionStrategy.OnPush()',
+			componentOnPushRequired: 'Component ChangeDetection strategy should be set to ChangeDetectionStrategy.OnPush()',
 		}
 	},
 	defaultOptions: [],
