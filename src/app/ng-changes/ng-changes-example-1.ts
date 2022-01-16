@@ -1,5 +1,4 @@
 import { ChangeDetectionStrategy, Component, Input, OnChanges, SimpleChanges } from '@angular/core';
-import { NgChanges } from 'src/app/utils/NgChanges';
 
 @Component({
 	selector: 'ng-changes-example-1',
@@ -14,7 +13,7 @@ export class NgChangesExample1 implements OnChanges {
 	@Input()
 	authorName: string;
 
-	ngOnChanges(changes: NgChanges<NgChangesExample1>) {
+	ngOnChanges(changes: SimpleChanges) {
 		if (changes.bookName && changes.bookName.currentValue) {
 			this.bookName = this.bookName.toUpperCase();
 		}
